@@ -12,22 +12,33 @@ Accumulation: The result of the multiplication is then added to an accumulation 
 Output: The final output of the MAC unit is the value stored in the accumulator after all the multiplication and accumulation operations have been completed.
 
 Module Details:
+
 Inputs:
+
 in_a: Signed 4-bit input A.
+
 in_b: Signed 4-bit input B.
+
 in_valid_a: Input A validity signal.
+
 in_valid_b: Input B validity signal.
+
 clk: Clock signal.
+
 reset: Active-high synchronous reset.
 
 Output:
+
 mac_out: Signed 11-bit output which holds the accumulated result.
 
 FSM states:
 
 IDLE: Waits for valid inputs.
+
 WAIT_A: Waits for valid in_a after getting valid in_b.
+
 WAIT_B: Waits for valid in_b after getting valid in_a.
+
 MAC: Performs multiply-and-accumulate operation.
 
 When both in_valid_a and in_valid_b are high, the inputs are stored in internal registers reg_a and reg_b, and their product is added to the accumulated mac_out value.
