@@ -4,8 +4,11 @@ Overview of the Design:
 This project implements a MAC (Multiply and Accumulate) module using Verilog HDL, a fundamental block used in DSP (Digital Signal Processing), neural networks, and signal/image processing systems. The MAC unit multiplies two signed 4-bit inputs and accumulates the result over time depending on the input validity signals. It is designed as a finite state machine (FSM) and includes a basic testbench to simulate its behavior.
 
 Working of MAC Unit: 
+
 Multiplication: The MAC Unit takes two input operands and multiplies them together using hardware multiplier circuits or algorithms.
+
 Accumulation: The result of the multiplication is then added to an accumulation regsiter. This accumulator stores the accumulated sum of all multiplication results computed by the MAC unit.
+
 Output: The final output of the MAC unit is the value stored in the accumulator after all the multiplication and accumulation operations have been completed.
 
 Module Details:
